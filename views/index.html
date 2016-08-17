@@ -1,0 +1,39 @@
+{% extends 'layout.html' %} 
+
+{% block title %}Your Trip{% endblock %} 
+
+{% block content %}
+
+<div id="app">
+    <form class="form">
+    	<div class="form-group">
+    		<label for="hotel-choices">Hotels</label>
+    		<select>
+    			{% for hotel in hotels %}
+    			<option>{{hotel.name}}</option>
+    			{% endfor %}
+    			<button>+</button>
+    		</select>
+    	</div>
+    	<div class="form-group">
+    		<label for="restaurant-choices">Restaurants</label>
+    		<select>
+    			{% for restaurant in restaurants %}
+    			<option>{{restaurant.name}}</option>
+    			{% endfor %}
+    			<button>+</button>
+    		</select>
+    	</div>
+    	<div class="form-group">
+    		<label for="activity-choices">Activities</label>
+    		<select>
+    			{% for activity in activities %}
+    			<option>{{activity.name}}</option>
+    			{% endfor %}
+    			<button>+</button>
+    		</select>
+    	</div>
+    </form>
+</div>
+
+{% endblock %}
